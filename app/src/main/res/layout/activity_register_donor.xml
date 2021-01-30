@@ -1,0 +1,225 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".registerDonor">
+
+    <TextView
+        android:id="@+id/bloodtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="40dp"
+        android:background="@drawable/logo"
+        android:text="Blood Donor Registration"
+        android:textColor="@color/black"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.576"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/D_name"
+        android:layout_width="209dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:hint=" Name"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/D_phoneno"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/detailtv" />
+
+    <EditText
+        android:id="@+id/D_phoneno"
+        android:layout_width="209dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="10dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:hint=" Phone Number"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/age"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/D_name" />
+
+
+    <EditText
+        android:id="@+id/status"
+        android:layout_width="209dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="33dp"
+        android:background="@drawable/input_bg"
+        android:cursorVisible="false"
+        android:ems="10"
+        android:enabled="false"
+        android:hint="Active"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:text="Active"
+        android:textColor="@color/black"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/D_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/bloodtype" />
+
+    <Spinner
+        android:id="@+id/bloodtype"
+        android:layout_width="209dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="9dp"
+        android:background="@drawable/input_bg"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/status"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/age" />
+
+    <EditText
+        android:id="@+id/age"
+        android:layout_width="209dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:hint=" Age"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/bloodtype"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/D_phoneno" />
+
+    <TextView
+        android:id="@+id/detailtv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="92dp"
+        android:layout_marginBottom="14dp"
+        android:text="Fill in the Donor Detail"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/D_name"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/Addresstv"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Donation Location"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.501"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/D_date"
+        android:layout_width="209dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="26dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:hint=" Registration date"
+        android:inputType="date"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/city"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/status" />
+
+    <TextView
+        android:id="@+id/datetv"
+        android:layout_width="134dp"
+        android:layout_height="19dp"
+        android:layout_marginBottom="4dp"
+        android:drawableLeft="@drawable/ic_baseline_today_24"
+        android:text="Date of Register"
+        android:textColor="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/D_date"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <EditText
+        android:id="@+id/city"
+        android:layout_width="209dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/input_bg"
+        android:ems="10"
+        android:hint=" City"
+        android:inputType="textPersonName"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:textColorHint="@color/black"
+        app:layout_constraintBottom_toTopOf="@+id/spinner"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/D_date" />
+
+    <Spinner
+        android:id="@+id/spinner"
+        android:layout_width="209dp"
+        android:layout_height="0dp"
+        android:layout_marginBottom="8dp"
+        android:background="@drawable/input_bg"
+        android:paddingLeft="20dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        app:layout_constraintBottom_toTopOf="@+id/resetBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/city" />
+
+    <Button
+        android:id="@+id/resetBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="17dp"
+        android:text="Reset"
+        android:textColor="#F8F0F0"
+        app:backgroundTint="@color/purple_200"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/spinner" />
+
+    <Button
+        android:id="@+id/saveBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="32dp"
+        android:layout_marginLeft="32dp"
+        android:text="Save"
+        android:textColor="#F8F3F3"
+        app:backgroundTint="@color/purple_200"
+        app:layout_constraintBaseline_toBaselineOf="@+id/resetBtn"
+        app:layout_constraintStart_toEndOf="@+id/resetBtn" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

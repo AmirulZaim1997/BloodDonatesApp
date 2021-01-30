@@ -1,0 +1,155 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#EFE4E4">
+
+
+    <TextView
+        android:id="@+id/abouttv"
+        android:layout_width="177dp"
+        android:layout_height="38dp"
+        android:layout_marginBottom="312dp"
+        android:background="@android:drawable/editbox_background"
+        android:paddingLeft="10dp"
+        android:paddingTop="5dp"
+        android:paddingRight="10dp"
+        android:paddingBottom="5dp"
+        android:text="ABOUT DONATION"
+        android:textColor="#550E0E"
+        android:textSize="18sp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.128"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/hometv1"
+        android:layout_width="231dp"
+        android:layout_height="34dp"
+        android:layout_marginTop="16dp"
+        android:text="DONATION HISTORY"
+        android:textColor="#150F0F"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.583"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="413dp"
+        android:layout_height="180dp"
+        android:background="@drawable/_"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.134">
+
+        <ImageView
+            android:id="@+id/icon"
+            android:layout_width="117dp"
+            android:layout_height="110dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/cardview"
+            app:layout_constraintHorizontal_bias="0.465"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/user" />
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/cardview"
+            android:layout_width="170dp"
+            android:layout_height="130dp"
+            android:layout_marginTop="24dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.857"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/blooddis"
+                android:layout_width="159dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="70dp"
+                android:editable="false"
+                android:gravity="center"
+                android:textColor="#511E1E"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/namedis"
+                android:layout_width="159dp"
+                android:layout_height="38dp"
+                android:layout_marginLeft="5dp"
+                android:layout_marginTop="25dp"
+                android:editable="false"
+                android:gravity="center"
+                android:textColor="#421E1E"
+                android:textStyle="bold" />
+        </androidx.cardview.widget.CardView>
+
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <ImageView
+        android:id="@+id/imageView"
+        android:layout_width="103dp"
+        android:layout_height="91dp"
+        android:layout_marginBottom="568dp"
+        android:background="@drawable/kisspng_plate_tableware_circle_white_dish_5a749e72dcf429_935376821517592178905"
+        android:paddingLeft="15dp"
+        android:paddingRight="15dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.006"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.0"
+        app:srcCompat="@drawable/blood_bank_logo_removebg_preview" />
+
+    <HorizontalScrollView
+        android:id="@+id/horizontalScrollView3"
+        android:layout_width="351dp"
+        android:layout_height="299dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.494"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/constraintLayout">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/donorhistory"
+            android:layout_width="150dp"
+            android:layout_height="700dp"
+            android:nestedScrollingEnabled="true"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            tools:listitem="@layout/table_list_item">
+
+        </androidx.recyclerview.widget.RecyclerView>
+
+    </HorizontalScrollView>
+
+    <ImageButton
+        android:id="@+id/scanqrbtn"
+        android:layout_width="51dp"
+        android:layout_height="55dp"
+        android:layout_marginStart="30dp"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginEnd="330dp"
+        android:layout_marginRight="330dp"
+        android:layout_marginBottom="8dp"
+        app:layout_constraintBottom_toTopOf="@+id/abouttv"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="1.0"
+        app:srcCompat="@drawable/qrscan_foreground" />
+</androidx.constraintlayout.widget.ConstraintLayout>

@@ -1,0 +1,184 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".insertTest">
+
+    <EditText
+        android:id="@+id/inputbankName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginTop="16dp"
+        android:layout_marginEnd="14dp"
+        android:layout_marginRight="14dp"
+        android:ems="10"
+        android:hint="Bank Name"
+        android:inputType="textPersonName"
+        app:layout_constraintEnd_toStartOf="@+id/inputPhone"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputState"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="11dp"
+        android:ems="10"
+        android:hint="State"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/bankbtn"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputLat" />
+
+    <Button
+        android:id="@+id/bankbtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="13dp"
+        android:text="Add bank"
+        app:layout_constraintBottom_toTopOf="@+id/inputevent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputState" />
+
+    <EditText
+        android:id="@+id/inputPhone"
+        android:layout_width="156dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="240dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginTop="13dp"
+        android:layout_marginEnd="15dp"
+        android:layout_marginRight="15dp"
+        android:layout_marginBottom="548dp"
+        android:ems="10"
+        android:hint="phone"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/inputAddress"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginBottom="5dp"
+        android:ems="10"
+        android:hint="Address"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/inputLat"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputPhone" />
+
+    <EditText
+        android:id="@+id/inputdate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="14dp"
+        android:ems="10"
+        android:hint="Date"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/inputtime"
+        app:layout_constraintStart_toStartOf="@+id/inputevent"
+        app:layout_constraintTop_toBottomOf="@+id/inputevent" />
+
+    <EditText
+        android:id="@+id/inputevent"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="9dp"
+        android:ems="10"
+        android:hint="Donation Event"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/inputdate"
+        app:layout_constraintStart_toStartOf="@+id/inputtime"
+        app:layout_constraintTop_toBottomOf="@+id/bankbtn" />
+
+    <EditText
+        android:id="@+id/inputlocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Location"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/inputstate"
+        app:layout_constraintStart_toStartOf="@+id/inputstate"
+        app:layout_constraintTop_toBottomOf="@+id/inputtime" />
+
+    <EditText
+        android:id="@+id/inputtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Time"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/inputlocation"
+        app:layout_constraintStart_toStartOf="@+id/inputlocation"
+        app:layout_constraintTop_toBottomOf="@+id/inputdate" />
+
+    <EditText
+        android:id="@+id/inputstate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:ems="10"
+        android:hint="State"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/donationBtn"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputlocation" />
+
+    <Button
+        android:id="@+id/donationBtn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="31dp"
+        android:layout_marginRight="31dp"
+        android:text="Add donation"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/inputstate"
+        app:layout_constraintTop_toBottomOf="@+id/inputstate" />
+
+    <EditText
+        android:id="@+id/inputLat"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="18dp"
+        android:layout_marginLeft="18dp"
+        android:layout_marginEnd="13dp"
+        android:layout_marginRight="13dp"
+        android:layout_marginBottom="13dp"
+        android:ems="10"
+        android:hint="Latitud"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/inputState"
+        app:layout_constraintEnd_toStartOf="@+id/inputLong"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/inputAddress" />
+
+    <EditText
+        android:id="@+id/inputLong"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginEnd="116dp"
+        android:layout_marginRight="116dp"
+        android:ems="10"
+        android:hint="Longtitud"
+        android:inputType="textPersonName"
+        app:layout_constraintBottom_toBottomOf="@+id/inputLat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toEndOf="@+id/inputLat"
+        app:layout_constraintTop_toTopOf="@+id/inputLat" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

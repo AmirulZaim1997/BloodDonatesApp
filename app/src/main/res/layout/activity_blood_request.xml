@@ -1,0 +1,260 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".bloodRequest">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/constraintLayout"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        tools:context=".BloodRequest">
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="13dp"
+            android:layout_marginRight="13dp"
+            android:text="Choose blood type:"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/spinner1"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/spinner1" />
+
+        <Spinner
+            android:id="@+id/spinner1"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="90dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginRight="59dp"
+            android:layout_marginBottom="92dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toBottomOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView2"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/textView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="155dp"
+            android:layout_marginEnd="6dp"
+            android:layout_marginRight="6dp"
+            android:text="Blood group needed:"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintEnd_toStartOf="@+id/spinner2"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <Spinner
+            android:id="@+id/spinner2"
+            android:layout_width="0dp"
+            android:layout_height="40dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="59dp"
+            android:layout_marginRight="59dp"
+            android:layout_marginBottom="17dp"
+            android:background="@android:drawable/btn_dropdown"
+            android:spinnerMode="dropdown"
+            app:layout_constraintBottom_toTopOf="@+id/textView3"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/textView"
+            app:layout_constraintTop_toBottomOf="@+id/spinner1" />
+
+        <TextView
+            android:id="@+id/textView3"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="15dp"
+            android:layout_marginLeft="15dp"
+            android:layout_marginTop="29dp"
+            android:text="Reason(s) of request:"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView" />
+
+        <CheckBox
+            android:id="@+id/cbaccident"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="17dp"
+            android:layout_marginLeft="17dp"
+            android:layout_marginTop="21dp"
+            android:text="Accident"
+            android:textColor="#000000"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView3" />
+
+        <CheckBox
+            android:id="@+id/cbcancer"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Cancer"
+            android:textColor="#000000"
+            app:layout_constraintEnd_toEndOf="@+id/textView3"
+            app:layout_constraintStart_toEndOf="@+id/textView3"
+            app:layout_constraintTop_toTopOf="@+id/cbaccident" />
+
+        <CheckBox
+            android:id="@+id/cbpreg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Pregnancy"
+            android:textColor="#050505"
+            app:layout_constraintStart_toStartOf="@+id/cbothers"
+            app:layout_constraintTop_toTopOf="@+id/cbcancer" />
+
+        <CheckBox
+            android:id="@+id/cbtrans"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Transplant"
+            android:textColor="#000000"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cbsurgery"
+            app:layout_constraintStart_toStartOf="@+id/cbaccident" />
+
+        <CheckBox
+            android:id="@+id/cbsurgery"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_marginLeft="2dp"
+            android:text="Surgery"
+            android:textColor="#070707"
+            app:layout_constraintBaseline_toBaselineOf="@+id/cbothers"
+            app:layout_constraintStart_toEndOf="@+id/cbtrans" />
+
+        <CheckBox
+            android:id="@+id/cbothers"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:layout_marginTop="2dp"
+            android:text="Others"
+            android:textColor="#000000"
+            app:layout_constraintStart_toEndOf="@+id/cbsurgery"
+            app:layout_constraintTop_toBottomOf="@+id/cbpreg" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="9dp"
+            android:layout_marginLeft="9dp"
+            android:layout_marginTop="35dp"
+            android:text="Which hospital blood donor?"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/cbtrans" />
+
+        <EditText
+            android:id="@+id/hospitaledtxt"
+            android:layout_width="350dp"
+            android:layout_height="50dp"
+            android:layout_marginTop="19dp"
+            android:layout_marginBottom="18dp"
+            android:ems="10"
+            android:inputType="textPersonName"
+            android:textColor="#000000"
+            app:layout_constraintBottom_toTopOf="@+id/textView5"
+            app:layout_constraintEnd_toEndOf="@+id/textView5"
+            app:layout_constraintStart_toEndOf="@+id/textView5"
+            app:layout_constraintTop_toTopOf="@+id/textView4" />
+
+        <TextView
+            android:id="@+id/textView5"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="68dp"
+            android:text="Message for potential donor:"
+            android:textColor="#000000"
+            android:textStyle="bold"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/textView4" />
+
+        <EditText
+            android:id="@+id/msgedtxt"
+            android:layout_width="355dp"
+            android:layout_height="50dp"
+            android:layout_marginStart="1dp"
+            android:layout_marginLeft="1dp"
+            android:ems="10"
+            android:gravity="start|top"
+            android:inputType="textMultiLine"
+            android:textColor="#000000"
+            android:textColorHint="#050505"
+            app:layout_constraintStart_toStartOf="@+id/textView5"
+            app:layout_constraintTop_toBottomOf="@+id/textView5" />
+
+        <Button
+            android:id="@+id/submitbtn"
+            android:layout_width="0dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="12dp"
+            android:layout_marginLeft="12dp"
+            android:layout_marginTop="96dp"
+            android:layout_marginEnd="12dp"
+            android:layout_marginRight="12dp"
+            android:layout_marginBottom="108dp"
+            android:background="#957474"
+            android:text="Submit request"
+            android:textColor="#FFFFFF"
+            app:backgroundTint="#FB1212"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="@+id/msgedtxt"
+            app:layout_constraintVertical_bias="0.0" />
+
+        <TextView
+            android:id="@+id/hometxt"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="16dp"
+            android:layout_marginLeft="16dp"
+            android:text=" Home   >"
+            android:textColor="#EA2121"
+            android:textSize="18sp"
+            android:textStyle="bold|italic"
+            app:layout_constraintBaseline_toBaselineOf="@+id/textView7"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView7"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="11dp"
+            android:layout_marginLeft="11dp"
+            android:layout_marginTop="28dp"
+            android:text="Blood Request"
+            android:textColor="#050505"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintStart_toEndOf="@+id/hometxt"
+            app:layout_constraintTop_toTopOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.constraintlayout.widget.ConstraintLayout>

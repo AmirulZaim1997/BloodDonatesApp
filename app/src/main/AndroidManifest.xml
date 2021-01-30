@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.example.bloodbank">
+
+    <uses-permission android:name="android.permission.ACCESS_FINE_LOCATION" />
+    <uses-permission android:name="android.permission.ACCESS_COARSE_LOCATION" />
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.CAMERA" />
+    <uses-permission android:name="android.permission.VIBRATE" />
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/Theme.BloodBank">
+
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDZwoKhwQ0yseaad0bwO9xuIdqQghIsfZo"
+            />
+
+        <activity android:name=".updateUser"/>
+        <activity android:name=".allDonor"/>
+        <activity android:name=".viewDonor"/>
+        <activity android:name=".registerDonor"/>
+        <activity android:name=".bloodRequest"/>
+        <activity android:name=".Dashboard"/>
+        <activity android:name=".blood_information" />
+        <activity android:name=".donationRecord"></activity>
+        <activity android:name=".bloodBanklist" />
+        <activity android:name=".reminder" />
+        <activity android:name=".insertTest" />
+        <activity android:name=".DonationEvent" />
+        <activity android:name=".acapmain"/>
+        <activity android:name=".Profile"></activity>
+        <activity android:name=".Splash">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter></activity>
+        <activity android:name=".ViewUser">
+
+        </activity>
+        <activity android:name=".Reset" />
+        <activity android:name=".Menu" />
+        <activity android:name=".Login" />
+        <activity android:name=".MainActivity" />
+
+    </application>
+
+</manifest>
